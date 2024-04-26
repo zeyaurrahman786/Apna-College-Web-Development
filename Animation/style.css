@@ -1,0 +1,22 @@
+.box{
+    height: 100px;
+    width: 300px;
+    background-color: palevioletred;
+
+    animation: colAnimate 4s ease-in 0s 2 normal;
+}
+
+@keyframes colAnimate {
+    0%{
+        background-color: green;
+    }
+    50%{
+        background-color: yellow;
+    }
+    80%{
+        background-color: red;
+    }
+    100%{
+        background-color: blue;
+    }
+} 
