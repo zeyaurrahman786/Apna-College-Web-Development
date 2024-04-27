@@ -12,3 +12,13 @@
 
 
 
+// Prcatice Question :) For the given start state of an array, change it ot final form using methods.  -> start: ['january','july','march','august'] & final: ['july','june','march','august']
+
+// let months = ['january','july','march','august'];
+// months.shift();
+// months.shift();
+// months.unshift("june");
+// months.unshift("july");
+
+
+
