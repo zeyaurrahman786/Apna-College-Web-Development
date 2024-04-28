@@ -102,3 +102,48 @@
 
 
 
+//  Practice Question :-) Create a function that gives us the average of 3 numbers. 
+
+// function calcAvg (a, b, c){
+//     let avg = (a+b+c)/3;
+//     console.log(avg);
+// }
+// calcAvg(10, 20, 30);
+
+
+
+
+
+//  Practice Question :-) Create a function that prints the multiplication table of a number.
+
+// function printTable(n){
+//     for(let i=n; i<=n*10; i+=n){
+//         console.log(i);
+//     }
+// }
+// printTable(10);
+
+
+
+
+
+// Return Keyword :-) Return keyword is used to return some value from the function.
+
+// function sum (a, b){
+//     return a + b;
+// }
+// console.log(sum(3,4));
+
+
+
+
+
+// function sum (a, b){
+//     return a + b;
+// }
+// console.log(sum(sum(3,4),3));
+
+
+
+
+
