@@ -286,3 +286,88 @@
 
 // Higher Order Functions :-)
 
+// function multipleGreet(func, count){   // Higher Order Function
+//     for(let i=1; i<=count; i++){
+//         func();
+//     }
+// }
+
+// let greet = function(){
+//     console.log("Hello");
+// }
+
+// multipleGreet(greet, 5);
+
+
+
+
+
+// Higher Order Functions (Return) :-)
+
+// function oddOrEvenFactory(request){
+//     if(request == "odd"){
+//         return function(n){
+//             console.log(!(n%2 == 0));
+//         }
+//     }
+//     else if(request == "even"){
+//         return function(n){
+//             console.log(n%2 ==0);
+//         }
+//     }
+//     else {
+//         console.log("Wrong Request");
+//     }
+// }
+
+// let request = "odd"; // Even
+
+
+
+
+
+// Methods :-) Jo function object ke andar define hota hai usse function method kahte hai.
+
+// const calculator = {
+//     add: function(a, b){
+//         return a+b;
+//     },
+//     sub: function(a, b){
+//         return a-b;
+//     },
+//     multi: function(a,b){
+//         return a*b;
+//     },
+//     div: function(a,b){
+//         return a/b;
+//     }
+// }
+// console.log(calculator.add(5, 10));
+// console.log(calculator.sub(50, 10));
+// console.log(calculator.multi(5, 10));
+// console.log(calculator.div(50, 10));
+
+
+
+
+
+// Methods (Shorthand) :-)
+
+// const calculator = {
+//     add(a,b){
+//         return a+b;
+//     },
+//     sub(a,b){
+//         return a-b;
+//     },
+//     multi(a,b){
+//         return a*b;
+//     },
+//     div(a,b){
+//         return a/b;
+//     }
+// };
+// console.log(calculator.add(5, 8));
+// console.log(calculator.sub(10, 5));
+// console.log(calculator.multi(10, 8));
+// console.log(calculator.div(15, 5));
