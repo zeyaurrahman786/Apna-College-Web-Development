@@ -147,3 +147,142 @@
 
 
 
+//  Practice Question :-) Create a function that return the sum of a numbera from 1 to n.
+
+// function getSum (n){
+//     let sum = 0;
+
+//     for(let i=1; i<=n; i++){
+//         sum += i;
+//     }
+//     return sum;
+// }
+// console.log("Sum is :- ",getSum(100));
+
+
+
+
+
+//  Practice Question :-) Create a function that returns the concatenation of all strings in an array.
+
+// let str = ["Hello", "Hii", "Bye", "!"];
+
+// function concat(str){
+//     let result = "";
+
+//     for(let i=0; i<str.length; i++){
+//         result += str[i];
+//     }
+//     return result;
+// }
+// console.log(concat(str));
+
+
+
+
+
+// Scope :--------------------------------------------------------
+
+// Function Scope :-)
+
+// let sum = 54;  // Global Scope
+
+// function calSum (a,b){
+//     let sum = a + b;  // Function Scope
+//     console.log(sum);
+// }
+
+// calSum(1, 2);
+// console.log(sum);
+
+// Global Scope wale variable ko kahi bhi use kiya ja sakta hai, Function ke andar Function scope ka value rahta hai aur Function ke bahar Global Scope ka value rahta hai.
+
+
+
+
+
+// Block Scope :-) Isme {curley braces} ke bahar hum kuch bhi access nahi kar sakte hai. (var pe block scope kabhi bhi apply nahi hota hai)
+
+// {
+//     let a = 25;
+// }
+// console.log(a); // Error aayega 'a' is not define
+
+
+// for(let i=1; i<=5; i++){
+//     console.log(i); // Block Scope
+// }
+// console.log(i); // Error aayega 'i' is not define
+
+
+// let age = 25;
+// if(age >=18){
+//     let str = "adult";
+//     console.log(str); // Yeh chal jayega
+// }
+// console.log(str); // Error aayega 'str' is not define
+
+
+
+
+
+// Lexical Scope :-) Isme function ke andar bhi function bna sakte hai (Nested Function).
+
+//  function outerFun(){
+//     let x = 5;
+//     let y = 10;
+//     function innerFun(){  // Function Scope
+//         // let a = 20; // inverse not possible
+//         console.log(x);
+//         console.log(y);
+//     }
+//     // console.log(a); // Error aayega, yeh possible nahi hai 
+//     console.log(innerFun());
+//  }
+//  console.log(outerFun());
+
+
+
+
+
+// Practice Question :-)
+
+// let greet = "Hello"; // Global Scope
+
+// function changeGreet(){
+//     let greet = "Namaste"; // Function Scope
+//     console.log(greet);
+
+//     function innerGreet(){
+//         console.log(greet); // Lexical Scope
+//     }
+//     innerGreet();
+// }
+// console.log(greet);
+// changeGreet();
+
+
+
+
+
+// Function Expressions :-) Variable ke naam se hi function ko call karte hai. (isme value ko change bhi kar sakte hai update bhi kar sakte hai delete bhi kar sakte hai aur new value bhi likh sakte hai, agrument me pass bhi kar sakte hai aur return bhi kar sakte hai function me)
+
+// let name = "Zeyaur"
+
+// let sum = function (a, b){
+//     return a+b;
+// }
+// console.log(sum(1,3));
+
+
+// let hello = function (){
+//     console.log("Hello !");
+// }
+// hello();
+
+
+
+
+
+// Higher Order Functions :-)
+
