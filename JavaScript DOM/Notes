@@ -1,0 +1,8 @@
+// DOM (Document Object Model) :- The DOM represents a document with a logical tree. It allows us to manipulate/change webpage content (HTML elements).
+
+
+JavaScript me DOM (Document Object Model) ek programming interface hai jo web pages ke structure ko represent karta hai, aur unhe manipulate karne ka tareeka provide karta hai. DOM essentially ek tree-like structure hai jisme har HTML element ko ek node represent karta hai, aur in nodes ko JavaScript ke through access karke, unke attributes, content, style, ya behavior ko modify kiya ja sakta hai.
+
+DOM ka use web development me hota hai jab aapko dynamically content generate karna hota hai, ya existing content ko update karna hota hai, ya fir user ke actions (jaise ki button click, form submission, etc.) ke according page ko update karna hota hai. JavaScript DOM APIs ko use karke, aap HTML elements ko find kar sakte hain, unke properties aur attributes ko change kar sakte hain, unhe remove aur add kar sakte hain, aur in general web page ko interactive aur dynamic bana sakte hain.
+
+
