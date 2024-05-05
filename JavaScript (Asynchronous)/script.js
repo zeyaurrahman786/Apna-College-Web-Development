@@ -150,6 +150,12 @@
 // h1.style.color = "yellow";
 // }, 5000);
 
+
+
+
+
+
+
 // let h1  = document.querySelector("h1");
 
 // function changeColor(color, delay, nextColorChange){
@@ -183,7 +189,7 @@
 
 // Promises =================================)  
 
-// The Promise object represents the eventual completion (or failure) of an asynchronous operation.
+// The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
 
 /*
@@ -247,42 +253,219 @@
 
 
 
-function savetoDb (data, success, failure) {
 
-    let internetSpeed = Math.floor(Math.random() * 10) + 1;
-    console.log(internetSpeed);
-    if(internetSpeed > 4) {
-        success();
-    }
-    else {
-        failure();
-    }
- }
 
-savetoDb(
-    "zeyaur@gmail.com",
-     () => {
-    console.log("Success : Your data was saved");
-    savetoDb(
-        "rahman@gmail.com",
-        () => {
-        console.log("Success2 : Your data2 was saved");
-        savetoDb(
-            "zeyaurrahman@gmail.com",
-            () => {
-                console.log("Success3 : Your data3 was saved");
-            },
-            () => {
-                console.log("Failure3 : Weak Connection. Data not Saved");
-            }
-        );
-    },
-     ()=> {
-        console.log("Failure2 : Weak Connection. Data not Saved");
-    }
-);
-},
-    () => {
-        console.log("Failure : Weak Connection. Data not Saved");
-    }
-);
+
+// function savetoDb (data, success, failure) {
+
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     console.log(internetSpeed);
+//     if(internetSpeed > 4) {
+//         success();
+//     }
+//     else {
+//         failure();
+//     }
+//  }
+
+// savetoDb(
+//     "zeyaur@gmail.com",
+//      () => {
+//     console.log("Success : Your data was saved");
+//     savetoDb(
+//         "rahman@gmail.com",
+//         () => {
+//         console.log("Success2 : Your data2 was saved");
+//         savetoDb(
+//             "zeyaurrahman@gmail.com",
+//             () => {
+//                 console.log("Success3 : Your data3 was saved");
+//             },
+//             () => {
+//                 console.log("Failure3 : Weak Connection. Data not Saved");
+//             }
+//         );
+//     },
+//      ()=> {
+//         console.log("Failure2 : Weak Connection. Data not Saved");
+//     }
+// );
+// },
+//     () => {
+//         console.log("Failure : Weak Connection. Data not Saved");
+//     }
+// );
+
+
+
+
+
+
+
+
+
+// Promises (resolve & reject) :-)
+
+// function savetoDb (data) {
+//     return new Promise ((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random () * 10) + 1;
+//         console.log(internetSpeed);
+//         if (internetSpeed > 4) {
+//             resolve ("Successfully : Data was saved");
+//         }
+//         else {
+//             reject ("Failure : Weak Connection");
+//         }
+//     });
+// }
+
+// console.log(savetoDb("zeyaur@gmail.com"));
+
+
+
+
+
+
+
+
+
+// Promises -> then() & catch()
+
+// function savetoDb (data) {
+//     return new Promise ((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random () * 10) + 1;
+//         if (internetSpeed > 4) {
+//             resolve ("Successfully : Data was saved");
+//         }
+//         else {
+//             reject ("Failure : Weak Connection");
+//         }
+//     });
+// }
+
+// savetoDb("zeyaurrahman@gmail.com")
+//     .then(() => {
+//         console.log("Promise was resolved");
+//     })
+//     .catch(() => {
+//         console.log("Promise was rejected");
+//     });
+
+
+
+
+
+
+
+
+
+// Promises Chaining (Improved Version) :-)
+
+// function savetoDb (data) {
+//     return new Promise ((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random () * 10) + 1;
+//         if (internetSpeed > 4) {
+//             resolve ("Successfully : Data was saved");
+//         }
+//         else {
+//             reject ("Failure : Weak Connection");
+//         }
+//     });
+// }
+
+
+// savetoDb("zeyaurrahman@gmail.com")
+//     .then(() => {
+//         console.log("Data1 saved");
+//         return savetoDb("Hello World");
+//     })
+//         .then(() => {
+//             return console.log("Data2 saved.");
+//         })
+//         .then(() => {
+//             console.log("Data3 saved.");
+//         })
+//     .catch(() => {
+//         console.log("Promise was rejected");
+//     });
+
+
+
+
+
+
+
+// Results & Errors in Promises :-)
+
+// Promises are rejected and resolved with some data (valid results or errors).
+
+
+// function savetoDb (data) {
+//     return new Promise ((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random () * 10) + 1;
+//         if (internetSpeed > 4) {
+//             resolve ("Successfully : Data was saved");
+//         }
+//         else {
+//             reject ("Failure : Weak Connection");
+//         }
+//     });
+// }
+
+
+// savetoDb("zeyaurrahman@gmail.com")
+//     .then((result) => {
+//         console.log("Data1 saved");
+//         console.log("Result of promise : ",result);
+//         return savetoDb("Hello World");
+//     })
+//         .then((result) => {
+//             console.log("Data2 saved");
+//             console.log("Result of promise : ",result);
+//             return savetoDb("Zeyaur");
+//         })
+//         .then((result) => {
+//             console.log("Data3 saved");
+//             console.log("Result of promise : ",result);
+//         })
+//     .catch((error) => {
+//         console.log("Promise was rejected");
+//         console.log("Error of promise : ",error);
+//     });
+
+
+
+
+
+
+
+
+// Refactoring Old Code (Promises) :-) Let's apply promises to our callback hell.
+
+// let h1  = document.querySelector("h1");
+
+// function changeColor(color, delay){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//         h1.style.color = color;
+//         resolve("Color changed!")
+//     }, delay);
+//     });
+// }
+
+// changeColor("red", 1000)
+// .then(() =>{
+//     console.log("Red color was completed");
+//     return changeColor("orange", 1000);
+// })
+// .then(() =>{
+//     console.log("Orange color was completed");
+//     return changeColor("green", 1000);
+// })
+// .then(() =>{
+//     console.log("Green color was completed");
+//     return changeColor("blue", 1000);
+// })
+// .then(() =>{
+//     console.log("Blue color was completed");
+// })
