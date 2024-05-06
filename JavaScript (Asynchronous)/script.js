@@ -469,3 +469,188 @@
 // .then(() =>{
 //     console.log("Blue color was completed");
 // })
+
+
+
+
+
+
+
+
+
+
+// Asynchronous Functions =================================================================
+
+/*
+    Asynchronous functions, yaani ki "asynkc" functions, programming mein ek important concept hote hain. Jab aap kisi programming language mein code likhte hain, toh kuch operations time consume karte hain jaise ki file access, network communication, ya long-running calculations. Agar aap synchronous approach use karte hain, toh jab tak ye operations complete nahi ho jate, tab tak code execution ruk jati hai aur program next line pe move nahi karta.
+
+    Asynchronous programming mein, aap code ko aise likhte hain ki jab koi time-consuming operation chal rahi ho, tab dusre parts of the code continue kar sakein. Isse program ka performance improve hota hai aur user experience bhi better hota hai kyunki operations concurrently execute hote hain.
+
+    Asynchronous functions allow you to define tasks that can run independently of the main program flow. Typically, when you call an asynchronous function, it starts executing in the background, and your program can continue with other tasks instead of waiting for it to finish. This is commonly used in scenarios such as web development (handling multiple requests simultaneously), GUI applications (preventing freezing while performing heavy tasks), and I/O operations (reading/writing files, accessing databases, making network requests).  
+*/
+
+
+
+// Async Keyword :-)
+
+// let demo = async () => {
+//     return 5;
+// }  
+// console.log(demo());
+
+
+
+
+//  async function greet() {
+//     // throw "404 Not Found";
+//     return "Hello World";
+//  }
+
+//  greet()
+//  .then((result) => {
+//     console.log("Promise was resolved");
+//      console.log("Result was : ", result);
+//  })
+//  .catch((error) => {
+//      console.log("Promise was rejected");
+//      console.log("Error was : ", error);
+//  });
+
+
+
+
+
+
+// Await Keyword :-)
+
+// function getNum () {
+//     return new Promise ((resolve, reject) => {
+//         setTimeout (( )=> {
+//             let num = Math.floor(Math.random () * 10) + 1;
+//             console.log(num);
+//             resolve();
+//         }, 1000)
+//     });
+// }
+
+// async function demo () {
+//     await getNum ();
+//     await getNum ();
+//     await getNum ();
+//     await getNum ();
+//     await getNum ();
+//     getNum ();
+// }
+
+// console.log(demo());
+
+
+
+
+
+
+
+// h1 = document.querySelector("h1");
+
+// function changeColor(color, delay){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//         h1.style.color = color;
+//         console.log(`Color changed to ${color}!`);
+//         resolve("Color changed!")
+//     }, delay);
+//     });
+// }
+
+// async function colorChange () {
+//     await changeColor("red", 1000);
+//     await changeColor("orange", 1000);
+//     await changeColor("green", 1000);
+//     await changeColor("blue", 1000);
+//     await changeColor("indigo", 1000);
+//     changeColor("violet", 1000);
+// }
+
+// console.log(colorChange());
+
+
+
+
+
+
+// h1 = document.querySelector("h1");
+
+// function changeColor(color, delay){
+//     return new Promise((resolve, reject) => {
+        
+//         setTimeout(() => {
+//         let num = Math.floor (Math.random () * 5) +1;
+//         if( num > 3) {
+//             reject ("Failure : Weak Connection");
+//         }
+//         h1.style.color = color;
+//         console.log(`Color changed to ${color}!`);
+//         resolve("Color changed!")
+//     }, delay);
+//     });
+// }
+
+// async function colorChange () {
+//     await changeColor("red", 1000);
+//     await changeColor("orange", 1000);
+//     await changeColor("green", 1000);
+//     await changeColor("blue", 1000);
+//     await changeColor("indigo", 1000);
+//     await changeColor("violet", 1000);
+
+//     let a  = 5;
+//      console.log(a);
+//      console.log("New number  = ", a+3);
+// }
+
+// console.log(colorChange());
+
+
+
+
+
+
+
+
+// h1 = document.querySelector("h1");
+
+// function changeColor(color, delay){
+//     return new Promise((resolve, reject) => {
+        
+//         setTimeout(() => {
+//         let num = Math.floor (Math.random () * 5) +1;
+//         if( num > 3) {
+//             reject ("Failure : Weak Connection");
+//         }
+//         h1.style.color = color;
+//         console.log(`Color changed to ${color}!`);
+//         resolve("Color changed!")
+//     }, delay);
+//     });
+// }
+
+// async function colorChange () {
+//     try {
+//     await changeColor("red", 1000);
+//     await changeColor("orange", 1000);
+//     await changeColor("green", 1000);
+//     await changeColor("blue", 1000);
+//     await changeColor("indigo", 1000);
+//     await changeColor("violet", 1000);
+//     }
+//     catch (error) {
+//         console.log("Promise was rejected");
+//         console.log("Error was : ", error);
+//     }
+
+//     let a  = 5;
+//      console.log(a);
+//      console.log("New number  = ", a+3);
+// }
+
+// console.log(colorChange());
